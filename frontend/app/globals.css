@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Minecraft-style button */
+.btn-minecraft {
+  @apply px-4 py-2 bg-mc-green text-white font-bold;
+  @apply border-b-4 border-green-900;
+  @apply hover:bg-green-600 active:border-b-0 active:mt-1;
+  @apply transition-all duration-75;
+}
+
+/* Card style */
+.card {
+  @apply bg-gray-800 rounded-lg border border-gray-700;
+  @apply shadow-lg;
+}
+
+/* Input style */
+.input {
+  @apply w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg;
+  @apply text-white placeholder-gray-400;
+  @apply focus:outline-none focus:ring-2 focus:ring-mc-diamond focus:border-transparent;
+}
+
+/* Textarea style */
+.textarea {
+  @apply w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg;
+  @apply text-white placeholder-gray-400 resize-none;
+  @apply focus:outline-none focus:ring-2 focus:ring-mc-diamond focus:border-transparent;
+}
+
+/* Select style */
+.select {
+  @apply w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg;
+  @apply text-white;
+  @apply focus:outline-none focus:ring-2 focus:ring-mc-diamond focus:border-transparent;
+}
